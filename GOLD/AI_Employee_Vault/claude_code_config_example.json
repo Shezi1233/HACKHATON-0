@@ -1,0 +1,21 @@
+{
+  "mcp": {
+    "servers": [
+      {
+        "name": "ai-employee-vault",
+        "command": "node",
+        "args": ["simple_mcp_server.js"],
+        "resources": {
+          "read": ["file:///**"],
+          "write": ["file:///**"]
+        }
+      }
+    ]
+  },
+  "vault": {
+    "path": "./AI_Employee_Vault",
+    "monitored_folders": ["Inbox", "Needs_Action", "Done"],
+    "dashboard_file": "Dashboard.md",
+    "handbook_file": "Company_Handbook.md"
+  }
+}

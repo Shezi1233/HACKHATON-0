@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-02-26 03:26:28",
+  "linkedin_auth": "FAIL",
+  "whatsapp_session": "FAIL",
+  "playwright_install": "PASS",
+  "session_persistence": "PASS",
+  "mcp_connectivity": "PASS",
+  "detailed_results": {
+    "linkedin": {
+      "success": true,
+      "output": "BROWSER LAUNCH: Starting LinkedIn browser for authentication setup...\nBROWSER LAUNCH: LinkedIn browser started with persistent context\nLOGIN DETECTION: Attempting to navigate to LinkedIn feed...\nLOGIN DETECTION: LinkedIn requires login. Please log in manually.\nLOGIN DETECTION: Navigate to the feed and log in when browser is displayed.\nPress Enter after you have logged in and are on the feed page...LOGIN DETECTION: Error during login check: EOF when reading a line\nCHECKING: Going to LinkedIn notifications page...\nCHECKING: Going to LinkedIn messages page...\nCHECKING: Found 0 activities to process\n",
+      "error": "Could not confirm LinkedIn login status, proceeding anyway\n"
+    },
+    "whatsapp": {
+      "success": true,
+      "output": "BROWSER LAUNCH: Starting WhatsApp Web browser for authentication setup...\nBROWSER LAUNCH: WhatsApp Web browser started with persistent context\nQR LOGIC: Navigating to WhatsApp Web...\nQR LOGIC: Error during login check: Page.wait_for_selector: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"[data-testid=\\\"chat-list\\\"], [data-testid=\\\"qr-code\\\"]\") to be visible\n\nSESSION PERSISTENCE: Found 0 chats to check...\nSESSION PERSISTENCE: Found 0 messages with keywords to process\n",
+      "error": "Could not confirm WhatsApp Web login status, proceeding anyway\n"
+    },
+    "gmail_watcher": {
+      "success": true,
+      "output": "MCP CONNECTIVITY: Gmail credentials not found, running in simulation mode\n",
+      "error": "Gmail credentials not found. Running in simulation mode.\n"
+    },
+    "twitter_watcher": {
+      "success": false,
+      "output": "MCP CONNECTIVITY: Twitter credentials not fully configured\n",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\shahzad\\Downloads\\Hackhaton 0\\Gold\\AI_Employee_Vault\\twitter_watcher.py\", line 318, in <module>\n    watcher = TwitterWatcher(vault_path=args.vault_path, test_mode=test_mode)\n  File \"C:\\Users\\shahzad\\Downloads\\Hackhaton 0\\Gold\\AI_Employee_Vault\\twitter_watcher.py\", line 39, in __init__\n    raise ValueError(\"Twitter credentials not fully configured\")\nValueError: Twitter credentials not fully configured\n"
+    },
+    "facebook_watcher": {
+      "success": false,
+      "output": "MCP CONNECTIVITY: Facebook access token not configured\n",
+      "error": "Traceback (most recent call last):\n  File \"C:\\Users\\shahzad\\Downloads\\Hackhaton 0\\Gold\\AI_Employee_Vault\\facebook_watcher.py\", line 426, in <module>\n    watcher = FacebookWatcher(vault_path=args.vault_path, test_mode=test_mode)\n  File \"C:\\Users\\shahzad\\Downloads\\Hackhaton 0\\Gold\\AI_Employee_Vault\\facebook_watcher.py\", line 33, in __init__\n    raise ValueError(\"Facebook access token not configured\")\nValueError: Facebook access token not configured\n"
+    }
+  }
+}

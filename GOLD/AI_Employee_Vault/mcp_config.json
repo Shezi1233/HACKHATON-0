@@ -1,0 +1,55 @@
+{
+  "servers": [
+    {
+      "name": "odoo",
+      "command": "node",
+      "args": ["mcp_servers/odoo_mcp_server.js"],
+      "env": {
+        "ODOO_URL": "http://localhost:8069",
+        "ODOO_DB": "your_database",
+        "ODOO_USERNAME": "admin",
+        "ODOO_PASSWORD": "admin"
+      },
+      "enabled": true
+    },
+    {
+      "name": "social-media",
+      "command": "node",
+      "args": ["mcp_servers/social_media_mcp_server.js"],
+      "env": {
+        "FACEBOOK_ACCESS_TOKEN": "your_facebook_token",
+        "INSTAGRAM_ACCESS_TOKEN": "your_instagram_token",
+        "FACEBOOK_PAGE_ID": "your_page_id",
+        "INSTAGRAM_ACCOUNT_ID": "your_instagram_account_id",
+        "TWITTER_BEARER_TOKEN": "your_twitter_bearer_token",
+        "TWITTER_API_KEY": "your_twitter_api_key",
+        "TWITTER_API_SECRET": "your_twitter_api_secret",
+        "TWITTER_ACCESS_TOKEN": "your_twitter_access_token",
+        "TWITTER_ACCESS_TOKEN_SECRET": "your_twitter_access_token_secret"
+      },
+      "enabled": true
+    },
+    {
+      "name": "email",
+      "command": "node",
+      "args": ["enhanced_mcp_server.js"],
+      "env": {
+        "GMAIL_CREDENTIALS": "gmail_credentials.json"
+      },
+      "enabled": true
+    },
+    {
+      "name": "filesystem",
+      "command": "node",
+      "args": ["node_modules/@modelcontextprotocol/server/dist/builtins/filesystem/index.js"],
+      "enabled": true
+    }
+  ],
+  "settings": {
+    "auto_restart": true,
+    "max_restarts": 5,
+    "restart_window": 300,
+    "connection_timeout": 30,
+    "health_check_interval": 60
+  }
+}
